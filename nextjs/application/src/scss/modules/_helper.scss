@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.text {
+	&-normal {
+		font-weight: $font-medium !important;
+	}
+
+	&-bold {
+		font-weight: $font-bold !important;
+	}
+
+	&-sub{
+		color: $text-sub;
+	}
+
+	&-center {
+		text-align: center;
+	}
+	&-right {
+		text-align: right;
+	}
+	&-left {
+		text-align: left;
+	}
+}
+
+.color{
+	&-primary {
+		color: $color-primary;
+	}
+
+	&-secondary {
+		color: $text-sub;
+	}
+
+	&-white {
+		color: $color-white;
+	}
+
+	&-danger {
+		color: $color-danger;
+	}
+
+	&-success {
+		color: $color-success;
+	}
+}

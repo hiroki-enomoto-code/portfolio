@@ -1,0 +1,172 @@
+@use "../../../scss/global" as *;
+
+.c-DrawingBoard {
+    margin: 0 auto;
+    padding: $space-sm;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &_main {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    &Controls {
+        display: flex;
+        justify-content: space-between;
+        height: 45px;
+        padding: 0 12px;
+        position: relative;
+        z-index: 1;
+
+        &_inner {
+            display: flex;
+            gap: $space-lg;
+        }
+
+        &_group {
+            display: flex;
+            gap: $space-xs;
+        }
+
+        &Button {
+            height: 100%;
+            aspect-ratio: 1;
+            position: relative;
+
+            &.is-active {
+                .c-DrawingBoardControlsButton_inner {
+                    background-color: $bg-ink-dark;
+                    color: $text-white;
+                    border-color: $bg-ink-dark;
+
+                    &:hover {
+                        background-color: $bg-ink-dark;
+                    }
+                }
+            }
+
+            &_inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border: 1px solid $color-content-stroke;
+                border-radius: $radius-xs;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.2s;
+                background-color: $bg-white;
+
+                &:hover {
+                    background-color: $bg-gray-lightest;
+                }
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &.is-reverse {
+                        transform: scale(-1, 1);
+                    }
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .color {
+                &Picker {
+                    display: flex;
+                    aspect-ratio: 1;
+                    height: 45px;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $color-content-stroke;
+                    border-radius: $radius-xs;
+
+                    &_color {
+                        display: block;
+                        border-radius: $radius-circle;
+                        background-color: $bg-white;
+                    }
+
+                    input[type="color"] {
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .range {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+
+                input {
+                    background-color: $bg-dark;
+                    border-radius: $radius-xxs;
+                    height: 10px;
+                    appearance: none;
+
+                    &::-webkit-slider-thumb,
+                    &::-moz-range-thumb {
+                        width: attr(data-size);
+                        height: attr(data-size);
+                        border-radius: $radius-circle;
+                        background-color: attr(data-color);
+                        appearance: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &Paintarea {
+        width: 608px;
+        height: 408px;
+        border: 1px solid $color-content-stroke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: $radius-sm;
+        background-color: #fff;
+
+        canvas {
+            border-radius: $radius-sm;
+        }
+    }
+
+    &ColorHistory {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xxs;
+        width: 30px;
+        padding: 12px 0;
+
+        button {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: $radius-xxs;
+            display: block;
+        }
+    }
+}

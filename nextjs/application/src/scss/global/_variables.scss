@@ -1,0 +1,210 @@
+/** ブレイクポイント	 */
+$break-sp: 767px;
+$break-tablet: 1000px;
+
+/* globals.css */
+:root {
+
+    --color-gray-50 :#FAFAFA;
+    --color-gray-100 :#f1f1f2;
+    --color-gray-200 :#E4E4E7;
+    --color-gray-300 :#D4D4D8;
+    --color-gray-400 :#A1A1AA;
+    --color-gray-500 :#71717A;
+    --color-gray-600 :#52525B;
+    --color-gray-700 :#3F3F46;
+    --color-gray-800 :#27272A;
+    --color-gray-900 :#18181B;
+
+    /* Color Semantic */
+    --color-main: #330873;
+    --color-secondary: #3E3E3E;
+    --color-danger: #FB385B;
+    --color-danger-light: #FFF2F2;
+    --color-success: #3A9DF9;
+    --color-success-light: #DBF0FF;
+
+
+    /* Color Background */
+    --bg-white : var(--color-gray-50);
+    --bg-gray-lightest : var(--color-gray-100);
+    --bg-gray-lighter : var(--color-gray-200);
+    --bg-gray-light : var(--color-gray-300);
+    --bg-gray-base : var(--color-gray-400);
+
+    --bg-dark : var(--color-gray-800);
+    --bg-ink-darkest : var(--color-gray-700);
+    --bg-ink-darker : var(--color-gray-600);
+    --bg-ink-dark : var(--color-gray-500);
+    --bg-ink-base : var(--color-gray-400);
+
+    --bg-modal : var(--bg-gray-lightest);
+
+
+    /* Color Text */
+    --text-base : var(--color-gray-900);
+    --text-white : var(--color-gray-100);
+    --text-base-fix : var(--color-gray-900);
+    --text-white-fix : var(--color-gray-100);
+    --text-sub: #8998AB;
+    --color-text-white: #FFFFFF;
+    --color-text-light: #5B5B5B;
+    --color-text-disabled: #B7B7B7;
+    --color-text-placeholder: #d1d5db;
+
+    /* Color Border */
+    --color-content-stroke : #CCD8E8;
+    --color-content-stroke-dark : transparent;
+
+    --color-border-black: var(--color-secondary);
+    --color-border-lv1: #E7E7E7;
+    --color-border-focus: #3798ed;
+
+    /* Font Weight */
+    --font-regular: 400;
+    --font-medium: 600;
+    --font-bold: 700;
+
+    /* Border Radius */
+    --radius-xxs: 4px;
+    --radius-xs: 8px;
+    --radius-s: 12px;
+    --radius-sm: 16px;
+    --radius-dm: 24px;
+    --radius-lg: 32px;
+    --radius-circle: 99999px;
+
+
+    /* Box Shadows */
+    --shadow: 0px 2px 4px rgba(152.06, 152.06, 152.06, 0.25);
+
+    --shadow-elevation-level1: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
+    --shadow-elevation-level2: 0px 2px 8px 6px rgba(0, 0, 0, 0.05);
+    --shadow-elevation-level3: 0px 4px 16px 8px rgba(0, 0, 0, 0.05);
+    --shadow-elevation-level4: 0px 6px 20px 12px rgba(0, 0, 0, 0.06);
+    --shadow-elevation-level5: 0px 8px 24px 16px rgba(0, 0, 0, 0.10);
+}
+
+:root.dark{
+    /* Color Text */
+    --color-text-light: #FFFFFF;
+    --color-text-disabled: #FFFFFF;
+    --color-text: #FFFFFF;
+    --color-danger: #FF859B;
+
+    --bg-white : var(--color-gray-800);
+    --bg-gray-lightest : var(--bg-ink-darkest);
+    --bg-gray-lighter : var(--bg-ink-darker);
+    --bg-gray-light : var(--bg-ink-dark);
+    --bg-gray-base : var(--bg-ink-base);
+
+    --bg-dark : var(--color-gray-50);
+
+    --bg-modal : var(--bg-dark-lv2);
+
+    --text-base : var(--color-gray-100);
+    --text-white : var(--color-gray-900);
+
+    --color-content-stroke-dark : #000;
+
+    --shadow : none;
+    --shadow-elevation-level1: none;
+    --shadow-elevation-level2: none;
+    --shadow-elevation-level3: none;
+    --shadow-elevation-level4: none;
+    --shadow-elevation-level5: none;
+}
+
+
+
+/**
+ * カラー設定
+ */
+
+$color-primary : var(--color-main);
+$color-secondary : var(--color-secondary);
+$color-white : #ffffff;
+$color-danger : var(--color-danger);
+$color-danger-light : var(--color-danger-light);
+$color-success : var(--color-success);
+$color-success-light : var(--color-success-light);
+
+$bg-white : var(--bg-white);
+$bg-base : var(--bg-gray-lightest);
+
+$bg-dark : var(--bg-dark);
+$bg-white : var(--bg-white);
+
+$bg-gray-lightest : var(--bg-gray-lightest);
+$bg-gray-lighter : var(--bg-gray-lighter);
+$bg-gray-light : var(--bg-gray-light);
+$bg-gray-base : var(--bg-gray-base);
+
+$bg-dark : var(--bg-dark);
+$bg-ink-darkest : var(--bg-ink-darkest);
+$bg-ink-darker : var(--bg-ink-darker);
+$bg-ink-dark : var(--bg-ink-dark);
+$bg-ink-base : var(--bg-ink-base);
+
+$bg-modal : var(--bg-modal);
+
+$text-base : var(--text-base);
+$text-sub : var(--text-sub);
+$text-white: var(--text-white);
+$text-base-fix : var(--text-base-fix);
+$text-white-fix : var(--text-white-fix);
+
+$color-text-black : var(--color-text-black);
+$color-text-white : var(--color-text-white);
+$color-text-light : var(--color-text-light);
+$color-text-disabled : var(--color-text-disabled);
+$color-text-placeholder : var(--color-text-placeholder);
+
+$color-bg-base : var(--color-bg-base);
+$color-bg-black : var(--color-bg-black);
+$color-bg-white : var(--color-bg-white);
+
+$color-border-black : var(--color-border-black);
+$color-border-lv1 : var(--color-border-lv1);
+$color-border-focus : var(--color-border-focus);
+
+/* Color Line */
+$color-content-stroke : var(--color-content-stroke);
+$color-content-stroke-dark : var(--color-content-stroke-dark);
+
+/* Font Weight */
+$font-regular: var(--font-regular);
+$font-medium: var(--font-medium);
+$font-bold: var(--font-bold);
+
+/* Border Radius */
+$radius-xxs: var(--radius-xxs);
+$radius-xs: var(--radius-xs);
+$radius-s: var(--radius-s);
+$radius-sm: var(--radius-sm);
+$radius-dm: var(--radius-dm);
+$radius-lg: var(--radius-lg);
+$radius-circle: var(--radius-circle);
+
+/* Box Shadows */
+$shadow-1: var(--shadow);
+$shadow-elevation-level1: var(--shadow-elevation-level1);
+$shadow-elevation-level2: var(--shadow-elevation-level2);
+$shadow-elevation-level3: var(--shadow-elevation-level3);
+$shadow-elevation-level4: var(--shadow-elevation-level4);
+$shadow-elevation-level5: var(--shadow-elevation-level5);
+
+$space-none: 0;
+$space-xxs: 4px;
+$space-xs: 8px;
+$space-s: 12px;
+$space-sm: 16px;
+$space-dm: 24px;
+$space-lg: 32px;
+$space-ll: 48px;
+$space-xl: 64px;
+
+/* z-index */
+$z-index-10 : 100000000;
+$z-index-9 : 9999;
+$z-index-8 : 8000;

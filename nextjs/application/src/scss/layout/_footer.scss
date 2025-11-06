@@ -1,0 +1,133 @@
+@use "../global" as *;
+
+.searchBoxUnder {
+	background: url("/images/mv.jpg") no-repeat center;
+	background-size: cover;
+	padding: 60px 0;
+
+	@include is-tb {
+		padding: 40px 0;
+	}
+
+	&_text {
+		color: #fff;
+		font-size: 24px;
+		margin-bottom: 20px;
+
+		@include is-tb {
+			font-size: 16px;
+		}
+	}
+}
+
+.footerNav {
+	margin: 0 auto;
+	max-width: 622px;
+	padding-top: 60px;
+
+	@include is-sp {
+		padding-top: 40px;
+		width: 100%;
+	}
+
+	&List {
+		display: flex;
+		justify-content: center;
+		white-space: nowrap;
+
+		@include is-sp {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		&_item {
+			+ .footerNavList_item {
+				margin-left: 24px;
+
+				@include is-sp {
+					margin: 20px 0 0;
+				}
+			}
+
+			> ul {
+				display: flex;
+				justify-content: center;
+
+				> li {
+					color: #fff;
+					font-size: 16px;
+					margin-left: 24px;
+					transition: all 0.3s;
+
+					@include is-sp {
+						font-size: 14px;
+						margin-left: 28px;
+					}
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footerSns {
+	background-color: $blue;
+	color: #fff;
+	padding: 26px 0;
+
+	@include is-tb {
+		padding: 20px 0;
+	}
+
+	&_inner {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 352px;
+
+		@include is-tb {
+			flex-direction: column;
+		}
+	}
+
+	&Icon {
+		width: 134px;
+
+		ul {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		a {
+			display: block;
+			height: 30px;
+			width: 30px;
+		}
+
+		.icon {
+			font-size: 30px;
+
+			@include is-tb {
+				margin-top: 16px;
+			}
+		}
+	}
+}
+
+
+small {
+	border-top: 1px #eaeaea solid;
+	color: #838383;
+	display: block;
+	font-size: 14px;
+	padding: 1em 0;
+}

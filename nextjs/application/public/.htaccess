@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# /quiz/〇〇
+RewriteRule ^quiz/([0-9]+)/?$ /quiz/id/index.html?id=$1 [L]
+
+# /quiz/edit/〇〇
+RewriteRule ^quiz/edit/([0-9]+)/?$ /quiz/edit/id/index.html?id=$1 [L]

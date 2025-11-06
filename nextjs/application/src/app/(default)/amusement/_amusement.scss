@@ -1,0 +1,641 @@
+@use "../../../scss/global" as *;
+
+#amusement {
+    background-color: #f8f3e7;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+
+    .sideBar{
+        position: fixed;
+        top: calc(50% - 40dvh);
+        width: 360px;
+        height: 80dvh;
+        display: flex;
+        align-items: flex-start;
+        transition: 0.3s;
+        right: 0;
+        transform: translateX(310px);
+        z-index: 1;
+        
+        &.is-open{
+            transform: translateX(0);
+        }
+
+        &Tab{
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: $space-xs;
+            padding: $space-xs 0;
+            &_item{
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $bg-gray-lightest;
+                border-radius: $radius-sm 0 0 $radius-sm;
+                transition: 0.3s;
+                font-size: 12px;
+                letter-spacing: -3px;
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                &.is-active, &:hover{
+                    background-color: $bg-white;
+                }
+            }
+        }
+        &Body{
+            flex: 1;
+            height: 100%;
+            background-color: $bg-white;
+            padding: $space-sm;
+
+            .chatLog{
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+                height: 100%;
+                overflow-y: auto;
+                &Item{
+                    &_name{
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    &_time{
+                        font-size: 10px;
+                        color: $color-text-light;
+                    }
+                    &_message{
+                        margin-top: 5px;
+                        text-indent: $space-sm;
+                        p {
+                            font-size: 12px;
+                            word-break: break-all;
+                        }
+        
+                        img{
+                            max-width: 100px;
+                            width: 100%;
+                            aspect-ratio: 1;
+                            border-radius: $radius-xxs;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .character {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: fit-content;
+        height: fit-content;
+
+        &.is-mine {
+            z-index: 2;
+        }
+
+        &Profile {
+            text-align: center;
+            position: relative;
+
+            &Emotion {
+                position: absolute;
+                top: -6px;
+                left: calc(100% + 5px);
+                white-space: nowrap;
+                font-size: 18px;
+                padding: 2px 7px;
+                border: 2px solid $color-content-stroke;
+                border-radius: 10px;
+                background-color: #fff;
+                animation: purun 0.8s linear 0s 1;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 38%;
+                    border-style: solid;
+                    border-width: 10px 11px 0 0;
+                    border-color: $color-content-stroke transparent transparent;
+                    translate: -50% 100%;
+                    transform: skew(-20deg);
+                    transform-origin: top;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 38%;
+                    border-style: solid;
+                    border-width: 5.5px 6px 0 0;
+                    border-color: #fff transparent transparent;
+                    translate: calc(-50% - 0.5px) 100%;
+                    transform: skew(-20deg);
+                    transform-origin: top;
+                }
+
+                @keyframes purun {
+                    0% {
+                        transform: scale(1.0, 1.0) translate(0%, 0%);
+                    }
+
+                    15% {
+                        transform: scale(0.9, 0.9) translate(0%, 5%);
+                    }
+
+                    30% {
+                        transform: scale(1.3, 0.8) translate(0%, 10%);
+                    }
+
+                    50% {
+                        transform: scale(0.8, 1.3) translate(0%, -10%);
+                    }
+
+                    70% {
+                        transform: scale(1.1, 0.9) translate(0%, 5%);
+                    }
+
+                    100% {
+                        transform: scale(1.0, 1.0) translate(0%, 0%);
+                    }
+                }
+            }
+
+            &_image {
+                position: relative;
+                cursor: grab;
+
+                &:hover {
+                    cursor: grabbing;
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    content: "";
+                }
+
+                img {
+                    width: auto;
+                    height: 100px;
+
+                    &.is-reflection {
+                        transform: scale(-1, 1);
+                    }
+                }
+            }
+
+            &_name {
+                display: flex;
+                gap: 5px;
+                margin-top: 5px;
+                text-align: center;
+                justify-content: center;
+
+                p {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &MessageList {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            gap: $space-xs;
+            display: flex;
+            flex-direction: column;
+            // max-height: 280px;
+            // overflow-y: auto;
+            padding: $space-s;
+
+            &Item {
+                max-width: 100%;
+                width: fit-content;
+                position: relative;
+                margin: auto;
+                padding: $space-xs $space-s;
+                border: 1px solid $color-content-stroke;
+                border-radius: $radius-xs;
+                background-color: $bg-white;
+                //animation: moveUp 45s linear 1 forwards;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    border-style: solid;
+                    border-width: 6px 6px 0 6px;
+                    border-color: $color-content-stroke transparent transparent;
+                    translate: -50% 100%;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    border-style: solid;
+                    border-width: 4.6px 4.6px 0 4.6px;
+                    border-color: #ffffff transparent transparent;
+                    translate: -50% 100%;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    white-space: pre-wrap;
+                    word-break: break-all;
+                }
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: $radius-xxs;
+                }
+            }
+
+            &Enquete{
+                width: 100%;
+                position: relative;
+                margin: auto;
+                padding: $space-xs $space-s;
+                border: 1px solid $color-content-stroke;
+                border-radius: $radius-xs;
+                background-color: $bg-white;
+                font-size: 12px;
+
+                &.is-end{
+                    //animation: moveUp 45s linear 1 forwards;
+                    background-color: $bg-gray-lightest;
+
+                    .characterMessageListEnqueteAnswers_select{
+                        background-color: $bg-white;
+                        border: none;
+                        background-color: $bg-gray-lighter;
+                        &::after{
+                            background-color: $bg-gray-light;
+                        }
+                    }
+                }
+
+                &_endButton{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                &_title{
+                    font-size: 16px;
+                    font-weight: $font-bold;
+                    text-align: center;
+                }
+
+                &_detail{
+                    margin-top: 5px;
+                    font-size: 12px;
+                    white-space: pre-wrap;
+                    word-break: break-all;
+                }
+
+                &Answers{
+                    margin-top: $space-s;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space-xs;
+                    font-size: 10px;
+
+                    &_select{
+                        position: relative;
+                        border-radius: $radius-xs;
+                        padding: $space-xs;
+                        background-color: $bg-white;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: $space-xxs;
+                        border: 1px solid $color-content-stroke;
+                        overflow: hidden;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: var(--w, 0);
+                            height: 100%;
+                            background-color: $bg-gray-lighter;
+                        }
+
+                        > span{
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+
+            &Quiz{
+                padding: $space-xs $space-s;
+                border: 1px solid $color-content-stroke;
+                border-radius: $radius-xs;
+                background-color: $bg-white;
+                width: 100%;
+            }
+
+            @keyframes moveUp {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(var(--ty, 0px));
+                }
+            }
+        }
+
+        &Operation {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            width: 136px;
+            height: 35px;
+            border: 1px solid $color-content-stroke;
+            border-radius: 8px;
+            transition: 0.2s;
+            overflow: hidden;
+            
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+                background-color: $bg-white;
+            }
+
+            &.is-focused {
+                flex-direction: column;
+                width: 250px;
+                height: auto;
+                
+                .characterOperation{
+                    &Message{
+                        height: 80px;
+                        position: relative;
+                        textarea {
+                            padding: $space-xs 30px $space-s $space-xs;
+                            line-height: 1.5;
+                        }
+    
+                        &_button{
+                            display: block;
+                            position: absolute;
+                            right: $space-xxs;
+                            top: $space-xxs;
+                        }
+                    }
+
+                    &Gesture{
+                        height: 80px;
+                    }
+                }
+
+                .characterOperationControl{
+                    &Buttons{
+                        &_button{
+                            &.is-close{
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &Tab{
+                padding: $space-xxs;
+            }
+
+            &Message {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+
+                textarea {
+                    width: 100%;
+                    height: 100%;
+                    padding: $space-xxs $space-xs;
+                    font-size: 12px;
+                    outline: none;
+                    resize: none;
+                    touch-action: none;
+                    transition: 0.2s;
+                    line-height: 27px;
+                }
+
+                &_image {
+                    width: auto;
+                    aspect-ratio: 1;
+                    height: 80px;
+                    padding: 4px;
+                    position: relative;
+                    img{
+                        border-radius: $radius-xxs;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    button{
+                        position: absolute;
+                        right: -20px;
+                        top: 4px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: $radius-xxs;
+                        background-color: $bg-gray-lightest;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $bg-gray-lighter;
+                        }
+                        svg {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+
+                &_button{
+                    color: $text-white;
+                    display: none;
+                }
+            }
+
+            &Gesture {
+                display: grid;
+                grid-template-columns: repeat(8, 25px);
+                gap: $space-xxs;
+                overflow-y: auto;
+            
+                button {
+                    height: 25px;
+                    width: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: $radius-xxs;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    font-size: 16px;
+            
+                    &:hover {
+                        background-color: $bg-gray-lightest;
+                    }
+                }
+            }
+
+            &Quiz{
+                height: 160px;
+                overflow-y: auto;
+
+                &Join{
+
+                }
+            }
+
+            &QuizStart{
+                position: relative;
+                z-index: 1;
+                padding: $space-s $space-xs $space-xs;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: $space-xs;
+                &_timer{
+                    font-weight: $font-bold;
+                    font-size: 20px;
+                }
+            }
+
+            &Control {
+                display: flex;
+                width: 100%;
+                padding: 4px;
+                justify-content: space-between;
+
+                &Buttons {
+                    display: flex;
+                    gap: 5px;
+
+                    &_button {
+                        height: 25px;
+                        width: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: $radius-xxs;
+                        background-color: $bg-gray-lightest;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:hover {
+                            background-color: $bg-gray-lighter;
+                        }
+
+                        &.is-close {
+                            display: none;
+                        }
+
+                        &.is-active {
+                            background-color: $bg-ink-darkest;
+                            color: $text-white;
+                        }
+
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        input[type="file"] {
+                            position: absolute;
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .setUp {
+        width: 100%;
+        max-width: 600px;
+        padding-top: 120px;
+        margin: 120px auto;
+        background-color: $bg-white;
+        padding: $space-dm;
+        border: 1px solid $color-content-stroke;
+        border-radius: $radius-sm;
+    }
+}
+
+.amusementSelectCharacterModal {
+    &_inner {
+        display: grid;
+        //4列のグリッドレイアウト
+        grid-template-columns: repeat(4, 100px);
+        gap: 10px;
+    }
+
+    &_item {
+        width: 100%;
+        aspect-ratio: 1;
+        padding: 4px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-white;
+
+        &.is-selected,
+        &:hover {
+            background-color: $bg-gray-lightest;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.amusementEnqueteModal{
+    width: 500px;
+    max-width: 100%;
+}

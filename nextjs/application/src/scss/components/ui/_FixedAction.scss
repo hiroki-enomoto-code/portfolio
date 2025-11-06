@@ -1,0 +1,38 @@
+@use "@/scss/global" as *;
+
+.m-FixedAction{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &.is-active{
+        
+        .m-FixedActionBody{
+            width: auto;
+            height: auto;
+            padding: 24px;
+            border-radius: $radius-dm;
+            visibility: visible;
+        }
+    }
+
+    &Button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &Body{
+        border-radius: $radius-circle;
+        box-shadow: $shadow-1;
+        background-color: $color-bg-base;
+        transition: 0.3s;
+        width: 40px;
+        height: 40px;
+        visibility: hidden;
+    }
+}

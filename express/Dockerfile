@@ -1,0 +1,21 @@
+FROM node:20.9.0-alpine
+
+WORKDIR /app
+
+# package.jsonとpackage-lock.jsonをコピー
+COPY package*.json ./
+
+# 依存関係をインストール
+RUN npm ci
+
+# アプリケーションのソースコードをコピー
+COPY . .
+
+# アプリケーションポートを公開
+EXPOSE 4000
+
+# アプリケーションを起動
+CMD ["npm", "start"]
+
+# コンテナが終了しないようにするための設定
+# CMD ["tail", "-f", "/dev/null"]

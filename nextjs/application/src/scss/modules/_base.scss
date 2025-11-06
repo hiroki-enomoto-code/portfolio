@@ -1,0 +1,30 @@
+@use "../global" as *;
+
+body {
+	font-family: "Poppins", "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
+    font-weight: $font-medium;
+	color: $text-base;
+	font-size: 14px;
+	line-height: 1.5;
+	width: 100%;
+	box-sizing:content-box;
+	background-color: $bg-white;
+}
+
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 200px;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+mark{
+	background: #ff9054;
+}

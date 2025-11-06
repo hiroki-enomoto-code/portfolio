@@ -1,0 +1,22 @@
+@use "../../../scss/global" as *;
+
+.c-Form{
+    display: flex;
+    flex-direction: column;
+    gap: $space-dm;
+    &Item{
+        display: flex;
+        flex-direction: column;
+        gap: $space-xxs;
+
+        &_label {
+            font-size: 14px;
+            font-weight: $font-bold;
+        }
+    }
+    &Error{
+        color: $color-danger;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+}

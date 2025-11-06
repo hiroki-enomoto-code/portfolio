@@ -1,0 +1,26 @@
+@use "../../../scss/global" as *;
+
+.m-Tab{
+    width: 100%;
+    &Body{
+        overflow: hidden;
+        &_inner{
+            display: flex;
+            //gap: $space-s;
+            align-items: flex-start;
+            transition: 0.3s;
+        }
+        &Item{
+            flex: 1;
+            overflow: hidden;
+            height: 0;
+            transition: 0.3s;
+            opacity: 0;
+            &.is-active{
+                opacity: 1;
+                height: auto;
+                overflow: visible;
+            }
+        }
+    }
+}

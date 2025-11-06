@@ -1,0 +1,121 @@
+networks: 
+  switcha:
+    name: switcha
+    internal: false
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.250.0/28
+
+version: '3'
+
+services:
+  nextjs:
+    container_name: nextjs
+    build:
+      context: ./nextjs
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nextjs/application:/application
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - php
+    networks:
+      - switcha
+
+  php:
+    container_name: php
+    build: ./docker/php
+    hostname: switcha
+    volumes:
+    - ./nginx/www/htdocs:/var/www/htdocs
+    - ./nginx/www/backend:/var/www/backend
+    networks:
+      - switcha
+
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    hostname: switcha
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+    - ./nginx/default.prod.conf:/etc/nginx/conf.d/default.conf
+    - ./nginx/www/backend/storage/app:/var/www/backend/storage/app
+    networks:
+      - switcha
+
+  express:
+    build:
+      context: ./express
+      dockerfile: Dockerfile
+    container_name: express
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+    volumes:
+      - ./express/src:/app/src
+      - ./express/package.json:/app/package.json
+      - ./express/package-lock.json:/app/package-lock.json
+      - ./express/node_modules:/app/node_modules
+    restart: unless-stopped
+    networks:
+      - switcha
+
+  mail_server:
+    build:
+      context: ./mail
+      dockerfile: Dockerfile
+    container_name: mail_server
+    hostname: mail.local
+    ports:
+      - "25:25"     # SMTP
+      - "587:587"   # Submission
+    environment:
+      - MAIL_DOMAIN=local
+      - MAIL_HOSTNAME=mail.local
+    volumes:
+      - ./mail/mailbox:/var/mail
+      - ./mail/maillog:/var/log
+    restart: unless-stopped
+    networks:
+      - switcha
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      # - PMA_HOST=db
+      # - PMA_USER=root
+      # - PMA_PASSWORD=password
+      - PMA_HOST=172.16.249.69
+      - UPLOAD_LIMIT=64M
+    volumes:
+      - ./phpmyadmin/pma-session-store:/sessions
+    networks:
+      - switcha
+
+  redis:
+    image: redis:7.2.4-alpine
+    container_name: redis-external
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - "6379:6379"
+    volumes:
+      # - ./redis-data/dump.rdb:/data/dump.rdb
+      - ./redis/datas:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_PASSWORD=MF4SiVn9A2HtiIU8dclr
+    # user: "${UID}:${GID}"
+    restart: always
+    networks:
+      - switcha

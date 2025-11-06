@@ -1,0 +1,213 @@
+@use "@/scss/global" as *;
+
+.m-BeatEditor{
+    width: 600px;
+
+    @include is-sp{
+        width: 100%;
+    }
+
+    &Parent{
+        padding: 8px;
+        background-color: $color-border-lv1;
+        border-radius: $radius-s;
+        &Head{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            &_icon{
+                width: 30px;
+                height: 30px;
+                border-radius: $radius-circle;
+                background-color: $color-bg-black;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            &_name{
+                font-size: 12px;
+            }
+        }
+        &_content{
+            padding-left: 40px;
+            margin-top: 8px;
+            font-size: 14px;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    }
+
+    &Post{
+        margin-top: 16px;
+        &Head{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: $radius-circle;
+                background-color: $color-bg-black;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        &Box{
+            flex: 1;
+        }
+    
+        &Editor{
+            position: relative;
+            padding-top: 10px;
+            width: 100%;
+            min-height: 120px;
+            font-size: 16px;
+    
+            &:empty:before{
+                content: attr(data-placeholder);
+                pointer-events: none;
+                display: block;
+                color: $color-text-placeholder;
+            }
+    
+            a{
+                text-decoration: underline;
+                color: blue;
+            }
+
+            .emoji{
+                width: 20px;
+                height: 20px;
+                margin: 0 4px;
+                vertical-align: sub;
+            }
+        }
+
+        &Attachment{
+            display: flex;
+            gap: 12px;
+            height: 100px;
+            &_item{
+                max-width: 300px;
+                aspect-ratio: 1;
+                border-radius: $radius-s;
+                background-color: $color-bg-base;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: $radius-s;
+                }
+                button{
+                    position: absolute;
+                    top: -12px;
+                    right: -12px;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-bg-base;
+                    border-radius: $radius-circle;
+                    cursor: pointer;
+                    svg{
+                        width: 16px;
+                        height: 16px;
+                        color: $color-text-light;
+                    }
+                }
+            }
+        }
+    }
+
+    &Footer{
+        border-top: 1px solid $color-border-lv1;
+        margin-top: 8px;
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &LinkMenu{
+        width: 400px;
+        &_input{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        &_button{
+            margin-top: 16px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+    }
+
+    &Attachment{
+        display: flex;
+        gap: 12px;
+        height: 100px;
+        &_item{
+            max-width: 300px;
+            aspect-ratio: 1;
+            border-radius: $radius-s;
+            background-color: $color-bg-base;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: $radius-s;
+            }
+            button{
+                position: absolute;
+                top: -12px;
+                right: -12px;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-bg-base;
+                border-radius: $radius-circle;
+                cursor: pointer;
+                svg{
+                    width: 16px;
+                    height: 16px;
+                    color: $color-text-light;
+                }
+            }
+        }
+    }
+
+    &Toolbar{
+        display: flex;
+        gap: $space-xs;
+        align-items: center;
+        &_item{
+            .icon{
+                color: $color-text-light;
+            }
+
+            .upload{
+                cursor: pointer;
+                width: 22px;
+                height: 22px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+@use "@/scss/global" as *;
+
+.m-Button {
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.size {
+        &-xs {
+            font-size: 10px;
+            padding: $space-xxs;
+        }
+
+        &-s {
+            font-size: 12px;
+            padding: $space-xs;
+        }
+
+        &-m {
+            font-size: 14px;
+            padding: $space-xs;
+        }
+
+        &-l {
+            font-size: 16px;
+            padding: $space-xs;
+        }
+    }
+
+    &.color {
+        &-primary {
+            background-color: $color-primary;
+            color: $text-white;
+        }
+
+        &-default {
+            background-color: $bg-base;
+        }
+
+        &-white {
+            background-color: $bg-white;
+        }
+
+        &-transparent {
+            background-color: transparent;
+        }
+
+        &-dark {
+            background-color: $bg-ink-dark;
+            color: $text-white;
+        }
+
+        &-danger {
+            background-color: $color-danger;
+            color: $text-white;
+        }
+
+        &-success {
+            background-color: $color-success;
+            color: $text-white;
+        }
+    }
+
+    &.border {
+        &-none {
+            border: none;
+        }
+
+        &-solid {
+            border: 1px solid $color-content-stroke;
+
+            &.color{
+
+                &-dark {
+                    border-color: $color-content-stroke-dark;
+                }
+
+                &-danger {
+                    background-color: $color-danger-light;
+                    border-color: $color-danger;
+                    color: $text-base;
+                }
+        
+                &-success {
+                    border-color: $color-success;
+                    background-color: $color-success-light;
+                    color: $text-base;
+                }
+            }
+        }
+    }
+
+    &.rounded {
+        &-none {
+            border-radius: 0;
+        }
+
+        &-xs {
+            border-radius: $radius-xs;
+        }
+
+        &-s {
+            border-radius: $radius-s;
+        }
+
+        &-m {
+            border-radius: $radius-dm;
+        }
+
+        &-l {
+            border-radius: $radius-lg;
+        }
+
+        &-circle {
+            border-radius: $radius-circle;
+        }
+    }
+
+    &:hover {
+        &.color {
+            &-default {
+                background-color: $bg-gray-lighter;
+            }
+
+            &-transparent {
+                background-color: $bg-gray-lightest;
+            }
+
+            &-white {
+                background-color: $bg-base;
+            }
+            &-dark {
+                background-color: $bg-ink-darker;
+            }
+
+            &-primary {
+                opacity: 0.8;
+            }
+
+            &-danger {
+                opacity: 0.8;
+            }
+    
+            &-success {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &.is-disabled {
+        cursor: not-allowed;
+        background-color: $bg-gray-lightest;
+        color: $text-base-fix;
+
+        &:hover {
+            background-color: $bg-gray-lightest;
+        }
+    }
+
+    &_load {
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+    }
+}

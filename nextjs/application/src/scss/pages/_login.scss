@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+#signIn{
+    .signIn{
+        &_inner{
+            width: 500px;
+            margin: auto;
+        }
+
+        &Form{
+            width: 100%;
+            &_title{
+                text-align: center;
+                font-size: 20px;
+                font-weight: $font-bold;
+            }
+            &_inner{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 20px;
+            }
+            &_button{
+                display: flex;
+                align-items: flex-end;
+                gap: 16px;
+            }
+
+            &_change{
+                font-size: 12px;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

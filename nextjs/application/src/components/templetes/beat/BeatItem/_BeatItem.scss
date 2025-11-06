@@ -1,0 +1,275 @@
+@use "../../../../scss/global" as *;
+
+.m-Beat{
+	&Item{
+		background-color: $bg-white;
+		box-shadow: $shadow-elevation-level3;
+		border-radius: $radius-sm;
+		border: 1px solid $color-content-stroke-dark;
+		overflow: hidden;
+		width: 100%;
+		padding: $space-sm;
+		cursor: pointer;
+
+		&.is-reply{
+			cursor: initial;
+			box-shadow: none;
+		}
+
+		&_inner{
+			z-index: 1;
+			display: grid;
+			width: 100%;
+			gap: $space-xs;
+			grid-template-columns: 40px 1fr;
+			grid-template-areas:
+				"avatar top"
+				"avatar detail";
+		}
+
+		&_avatar{
+			grid-area: avatar;
+		}
+
+		&_top{
+			grid-area: top;
+		}
+
+		&_detail{
+			grid-area: detail;
+		}
+
+		&Head{
+			display: flex;
+			justify-content: space-between;
+			height: 40px;
+			align-items: center;
+			&_name{
+				font-size: 14px;
+				font-weight: $font-bold;
+				color: $color-text-black;
+			}
+			&_right{
+				display: flex;
+				align-items: center;
+				gap: $space-xxs;
+			}
+			&_date{
+				font-size: 12px;
+				font-weight: $font-regular;
+				color: $text-sub;
+			}
+		}
+
+		&Text{
+			.emoji{
+				width: 20px;
+				height: 20px;
+				margin: 0 4px;
+				vertical-align: sub;
+			}
+			.content{
+				font-weight: $font-regular;
+				a{
+					color: blue;
+					text-decoration: underline;
+				}
+			}
+			.images{
+				display: flex;
+				margin-top: 16px;
+				width: fit-content;
+				border-radius: $radius-xs;
+				overflow: hidden;
+				&.is-1{
+					img{
+						width: auto;
+						height: auto;
+					}
+				}
+				&.is-2{
+					img{
+						max-width: 50%;
+						max-height: 300px;
+						object-fit: cover;
+					}
+				}
+				img{
+					object-fit: cover;
+				}
+			}
+		}
+
+		&Foot{
+			display: flex;
+			margin-top: $space-s;
+			gap: $space-s;
+			align-items: flex-end;
+			&_item{
+				display: flex;
+				align-items: center;
+				gap: $space-xxs;
+				cursor: pointer;
+				&_icon{
+					width: 20px;
+					height: auto;
+					color: $color-text-light;
+				}
+				&_count{
+					line-height: 1;
+					font-size: 12px;
+					color: $color-text-light;
+				}
+			}
+		}
+
+		&Config{
+			display: flex;
+			flex-direction: column;
+			min-width: 320px;
+			max-height: 70dvh;
+			&_button{
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: $space-xxs;
+				&.is-delete{
+					color: $color-danger;
+				}
+
+				&_icon{
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+
+		&Delete{
+			width: 560px;
+			@include is-sp{
+				width: 100%;
+			}
+		}
+
+		&Skeleton{
+			background-color: $bg-white;
+			box-shadow: $shadow-elevation-level3;
+			border-radius: $radius-sm;
+			overflow: hidden;
+			width: 100%;
+			padding: $space-sm;
+	
+			&_inner{
+				z-index: 1;
+				display: grid;
+				width: 100%;
+				gap: $space-xs;
+				grid-template-columns: 40px 1fr;
+				grid-template-areas:
+					"avatar top"
+					"avatar detail";
+			}
+	
+			&_avatar{
+				grid-area: avatar;
+				&Icon{
+					width: 40px;
+					height: 40px;
+					border-radius: $radius-circle;
+				}
+			}
+	
+			&_top{
+				grid-area: top;
+				display: flex;
+				justify-content: space-between;
+				height: 40px;
+				align-items: center;
+			}
+	
+			&_detail{
+				grid-area: detail;
+				display: flex;
+				flex-direction: column;
+				gap: $space-s;
+			}
+
+			&_name{
+				width: 100px;
+				height: 20px;
+			}
+
+			&_time{
+				width: 50px;
+				height: 20px;
+			}
+
+			&_text{
+				width: 100%;
+				height: 12px;
+			}
+
+			&_image{
+				width: 100%;
+				height: 200px;
+			}
+		}
+	}
+	&Reply{
+		margin-top: 24px;
+		position: relative;
+		&Post{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			padding: 0 24px;
+			gap: 4px;
+			align-items: center;
+			height: 60px;
+			border-top: 1px solid $color-border-lv1;
+			border-radius: $radius-s $radius-s 0 0;
+			background-color: $color-bg-white;
+
+			img{
+				width: 30px;
+				height: 30px;
+				overflow: hidden;
+				border-radius: $radius-circle;
+				object-fit: cover;
+			}
+
+			&_input{
+				flex: 1;
+				background-color: $color-border-lv1;
+				border-radius: $radius-s;
+				height: 30px;
+				line-height: 30px;
+				padding: 0 8px;
+			}
+		}
+		&Item{
+			&:nth-last-child(1){
+				margin-bottom: 60px;
+			}
+			&_body{
+				display: flex;
+				flex-direction: column;
+				padding-left: 40px;
+				position: relative;
+				gap: 16px 0;
+				padding-bottom: 16px;
+				&::after{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 20px;
+					width: 2px;
+					height: 100%;
+					background-color: $color-border-lv1;
+				}
+			}
+		}
+	}
+}

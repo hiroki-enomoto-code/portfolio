@@ -1,0 +1,123 @@
+@use "@/scss/global" as *;
+
+.m-Navi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 140px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg,rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 70%, rgba(247, 247, 247, 0) 100%);
+    &Box{
+        background-color: $color-bg-black;
+        color: $color-text-white;
+        height: 60px;
+        border-radius: $radius-dm;
+        padding: 0 40px;
+    }
+
+    &_inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 10px;
+    }
+
+    &Item {
+        height: 60px;
+        width: 60px;
+        list-style: none;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        &_icon{
+            transition: 0.3s;    
+        }
+
+        &.active {
+            &:nth-child(2) ~ .indicator {
+                --x: 70px;
+            }
+
+            &:nth-child(3) ~ .indicator {
+                --x: 140px;
+            }
+
+            &:nth-child(4) ~ .indicator {
+                --x: 210px;
+            }
+
+            &:nth-child(5) ~ .indicator {
+                --x: 280px;
+            }
+
+            .m-NaviItem_icon {
+                transform: translateY(-30px);
+            }
+
+            .text {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+
+            ~ .indicator {
+                --x: 0;
+
+                transform: translateX(var(--x));
+            }
+        }
+
+        .text {
+            font-size: 0.75em;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            opacity: 0;
+            position: absolute;
+            transform: translateY(20px);
+            transition: 0.5s;
+        }
+    }
+
+    .indicator {
+        background-color: $color-primary;
+        border: 6px solid $color-bg-base;
+        border-radius: 50%;
+        height: 60px;
+        position: absolute;
+        top: -50%;
+        transition: 0.3s;
+        width: 60px;
+        left: 0;
+
+        &::before, &::after {
+            background-color: transparent;
+            content: "";
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+        }
+
+        &::before {
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 $color-bg-base;
+            left: -22px;
+        }
+
+        &::after {
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 $color-bg-base;
+            right: -22px;
+        }
+    }
+}

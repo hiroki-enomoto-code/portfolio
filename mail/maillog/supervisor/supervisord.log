@@ -1,0 +1,378 @@
+2025-05-15 02:25:21,935 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 02:25:21,936 INFO supervisord started with pid 1
+2025-05-15 02:25:22,945 INFO spawned: 'master' with pid 13
+2025-05-15 02:25:22,950 INFO spawned: 'rsyslog' with pid 14
+2025-05-15 02:25:23,952 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 02:25:23,953 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 02:46:09,218 WARN received SIGTERM indicating exit request
+2025-05-15 02:46:09,220 INFO waiting for master, rsyslog to die
+2025-05-15 02:46:10,129 INFO stopped: rsyslog (exit status 0)
+2025-05-15 02:46:10,134 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 02:47:10,149 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 02:47:10,150 INFO supervisord started with pid 1
+2025-05-15 02:47:11,155 INFO spawned: 'master' with pid 13
+2025-05-15 02:47:11,159 INFO spawned: 'rsyslog' with pid 14
+2025-05-15 02:47:12,164 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 02:47:12,165 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 02:48:00,311 WARN received SIGTERM indicating exit request
+2025-05-15 02:48:00,314 INFO waiting for master, rsyslog to die
+2025-05-15 02:48:01,223 INFO stopped: rsyslog (exit status 0)
+2025-05-15 02:48:01,229 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 02:48:35,524 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 02:48:35,525 INFO supervisord started with pid 1
+2025-05-15 02:48:36,531 INFO spawned: 'master' with pid 20
+2025-05-15 02:48:36,535 INFO spawned: 'rsyslog' with pid 21
+2025-05-15 02:48:37,537 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 02:48:37,537 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:25:19,420 WARN received SIGTERM indicating exit request
+2025-05-15 03:25:19,420 INFO waiting for master, rsyslog to die
+2025-05-15 03:25:20,326 INFO stopped: rsyslog (exit status 0)
+2025-05-15 03:25:20,331 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 03:25:26,061 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 03:25:26,061 INFO supervisord started with pid 1
+2025-05-15 03:25:27,081 INFO spawned: 'master' with pid 20
+2025-05-15 03:25:27,091 INFO spawned: 'rsyslog' with pid 21
+2025-05-15 03:25:28,095 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:25:28,097 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:26:43,378 WARN received SIGTERM indicating exit request
+2025-05-15 03:26:43,380 INFO waiting for master, rsyslog to die
+2025-05-15 03:26:44,289 INFO stopped: rsyslog (exit status 0)
+2025-05-15 03:26:44,294 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 03:26:52,902 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 03:26:52,904 INFO supervisord started with pid 1
+2025-05-15 03:26:53,920 INFO spawned: 'master' with pid 20
+2025-05-15 03:26:53,930 INFO spawned: 'rsyslog' with pid 21
+2025-05-15 03:26:54,936 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:26:54,937 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:27:10,005 WARN received SIGTERM indicating exit request
+2025-05-15 03:27:10,006 INFO waiting for master, rsyslog to die
+2025-05-15 03:27:10,911 INFO stopped: rsyslog (exit status 0)
+2025-05-15 03:27:10,916 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 03:27:16,495 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 03:27:16,496 INFO supervisord started with pid 1
+2025-05-15 03:27:17,516 INFO spawned: 'master' with pid 19
+2025-05-15 03:27:17,528 INFO spawned: 'rsyslog' with pid 20
+2025-05-15 03:27:18,535 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 03:27:18,536 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:37:21,650 WARN received SIGTERM indicating exit request
+2025-05-15 04:37:21,651 INFO waiting for master, rsyslog to die
+2025-05-15 04:37:22,554 INFO stopped: rsyslog (exit status 0)
+2025-05-15 04:37:22,556 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 04:37:27,789 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 04:37:27,790 INFO supervisord started with pid 1
+2025-05-15 04:37:28,795 INFO spawned: 'master' with pid 19
+2025-05-15 04:37:28,800 INFO spawned: 'rsyslog' with pid 20
+2025-05-15 04:37:29,804 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:37:29,805 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:38:01,919 WARN received SIGTERM indicating exit request
+2025-05-15 04:38:01,920 INFO waiting for master, rsyslog to die
+2025-05-15 04:38:02,828 INFO stopped: rsyslog (exit status 0)
+2025-05-15 04:38:02,830 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 04:38:19,838 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 04:38:19,839 INFO supervisord started with pid 1
+2025-05-15 04:38:20,844 INFO spawned: 'master' with pid 20
+2025-05-15 04:38:20,848 INFO spawned: 'rsyslog' with pid 21
+2025-05-15 04:38:21,851 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:38:21,852 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:38:22,855 WARN received SIGTERM indicating exit request
+2025-05-15 04:38:22,855 INFO waiting for master, rsyslog to die
+2025-05-15 04:38:23,762 INFO stopped: rsyslog (exit status 0)
+2025-05-15 04:38:23,766 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 04:38:26,823 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 04:38:26,824 INFO supervisord started with pid 1
+2025-05-15 04:38:27,829 INFO spawned: 'master' with pid 20
+2025-05-15 04:38:27,834 INFO spawned: 'rsyslog' with pid 21
+2025-05-15 04:38:28,836 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:38:28,838 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:45:35,376 WARN received SIGTERM indicating exit request
+2025-05-15 04:45:35,376 INFO waiting for master, rsyslog to die
+2025-05-15 04:45:36,280 INFO stopped: rsyslog (exit status 0)
+2025-05-15 04:45:36,284 WARN stopped: master (terminated by SIGTERM)
+2025-05-15 04:46:46,779 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-15 04:46:46,780 INFO supervisord started with pid 1
+2025-05-15 04:46:47,797 INFO spawned: 'master' with pid 19
+2025-05-15 04:46:47,808 INFO spawned: 'rsyslog' with pid 20
+2025-05-15 04:46:48,811 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-15 04:46:48,812 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-16 04:57:04,231 WARN received SIGTERM indicating exit request
+2025-05-16 04:57:04,234 INFO waiting for master, rsyslog to die
+2025-05-16 04:57:05,142 INFO stopped: rsyslog (exit status 0)
+2025-05-16 04:57:05,146 WARN stopped: master (terminated by SIGTERM)
+2025-05-16 06:37:33,993 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-16 06:37:33,994 INFO supervisord started with pid 1
+2025-05-16 06:37:35,012 INFO spawned: 'master' with pid 19
+2025-05-16 06:37:35,023 INFO spawned: 'rsyslog' with pid 20
+2025-05-16 06:37:36,030 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-16 06:37:36,031 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-16 15:27:43,295 WARN received SIGTERM indicating exit request
+2025-05-16 15:27:43,297 INFO waiting for master, rsyslog to die
+2025-05-16 15:27:44,209 INFO stopped: rsyslog (exit status 0)
+2025-05-16 15:27:44,213 WARN stopped: master (terminated by SIGTERM)
+2025-05-16 15:31:45,556 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-16 15:31:45,561 INFO supervisord started with pid 1
+2025-05-16 15:31:46,660 INFO spawned: 'master' with pid 20
+2025-05-16 15:31:46,706 INFO spawned: 'rsyslog' with pid 21
+2025-05-16 15:31:47,711 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-16 15:31:47,713 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-17 05:53:15,499 WARN received SIGTERM indicating exit request
+2025-05-17 05:53:15,514 INFO waiting for master, rsyslog to die
+2025-05-17 05:53:16,433 INFO stopped: rsyslog (exit status 0)
+2025-05-17 05:53:16,443 WARN stopped: master (terminated by SIGTERM)
+2025-05-17 05:53:30,031 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-17 05:53:30,043 INFO supervisord started with pid 1
+2025-05-17 05:53:31,097 INFO spawned: 'master' with pid 20
+2025-05-17 05:53:31,106 INFO spawned: 'rsyslog' with pid 21
+2025-05-17 05:53:32,109 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-17 05:53:32,121 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-19 01:04:39,144 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-19 01:04:39,145 INFO supervisord started with pid 1
+2025-05-19 01:04:40,160 INFO spawned: 'master' with pid 20
+2025-05-19 01:04:40,169 INFO spawned: 'rsyslog' with pid 21
+2025-05-19 01:04:41,173 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-19 01:04:41,175 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-19 03:02:28,575 WARN received SIGTERM indicating exit request
+2025-05-19 03:02:28,576 INFO waiting for master, rsyslog to die
+2025-05-19 03:02:29,483 INFO stopped: rsyslog (exit status 0)
+2025-05-19 03:02:29,487 WARN stopped: master (terminated by SIGTERM)
+2025-05-19 03:31:48,614 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-19 03:31:48,615 INFO supervisord started with pid 1
+2025-05-19 03:31:49,640 INFO spawned: 'master' with pid 20
+2025-05-19 03:31:49,658 INFO spawned: 'rsyslog' with pid 21
+2025-05-19 03:31:50,661 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-19 03:31:50,661 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 03:27:42,138 WARN received SIGTERM indicating exit request
+2025-05-20 03:27:42,139 INFO waiting for master, rsyslog to die
+2025-05-20 03:27:43,051 INFO stopped: rsyslog (exit status 0)
+2025-05-20 03:27:43,057 WARN stopped: master (terminated by SIGTERM)
+2025-05-20 04:07:01,467 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-20 04:07:01,468 INFO supervisord started with pid 1
+2025-05-20 04:07:02,492 INFO spawned: 'master' with pid 20
+2025-05-20 04:07:02,504 INFO spawned: 'rsyslog' with pid 21
+2025-05-20 04:07:03,506 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 04:07:03,507 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 15:56:58,361 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-20 15:56:58,365 INFO supervisord started with pid 1
+2025-05-20 15:56:59,380 INFO spawned: 'master' with pid 21
+2025-05-20 15:56:59,389 INFO spawned: 'rsyslog' with pid 22
+2025-05-20 15:57:00,394 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 15:57:00,395 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 16:06:08,462 WARN received SIGTERM indicating exit request
+2025-05-20 16:06:08,466 INFO waiting for master, rsyslog to die
+2025-05-20 16:06:09,374 INFO stopped: rsyslog (exit status 0)
+2025-05-20 16:06:09,378 WARN stopped: master (terminated by SIGTERM)
+2025-05-20 16:06:28,679 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-20 16:06:28,682 INFO supervisord started with pid 1
+2025-05-20 16:06:29,751 INFO spawned: 'master' with pid 20
+2025-05-20 16:06:29,763 INFO spawned: 'rsyslog' with pid 21
+2025-05-20 16:06:30,766 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 16:06:30,791 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-20 18:18:09,291 WARN received SIGTERM indicating exit request
+2025-05-20 18:18:09,294 INFO waiting for master, rsyslog to die
+2025-05-20 18:18:10,198 INFO stopped: rsyslog (exit status 0)
+2025-05-20 18:18:10,201 WARN stopped: master (terminated by SIGTERM)
+2025-05-21 15:45:45,498 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-21 15:45:45,511 INFO supervisord started with pid 1
+2025-05-21 15:45:46,551 INFO spawned: 'master' with pid 20
+2025-05-21 15:45:46,599 INFO spawned: 'rsyslog' with pid 21
+2025-05-21 15:45:47,609 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-21 15:45:47,629 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-21 15:54:33,411 WARN received SIGTERM indicating exit request
+2025-05-21 15:54:33,414 INFO waiting for master, rsyslog to die
+2025-05-21 15:54:34,317 INFO stopped: rsyslog (exit status 0)
+2025-05-21 15:54:34,321 WARN stopped: master (terminated by SIGTERM)
+2025-05-21 15:54:42,079 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-21 15:54:42,088 INFO supervisord started with pid 1
+2025-05-21 15:54:43,139 INFO spawned: 'master' with pid 20
+2025-05-21 15:54:43,185 INFO spawned: 'rsyslog' with pid 28
+2025-05-21 15:54:44,213 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-21 15:54:44,229 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-23 01:44:27,446 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-23 01:44:27,447 INFO supervisord started with pid 1
+2025-05-23 01:44:28,464 INFO spawned: 'master' with pid 21
+2025-05-23 01:44:28,475 INFO spawned: 'rsyslog' with pid 22
+2025-05-23 01:44:29,477 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-23 01:44:29,477 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-23 11:31:47,203 WARN received SIGTERM indicating exit request
+2025-05-23 11:31:47,210 INFO waiting for master, rsyslog to die
+2025-05-23 11:31:48,117 INFO stopped: rsyslog (exit status 0)
+2025-05-23 11:31:48,122 WARN stopped: master (terminated by SIGTERM)
+2025-05-26 07:12:21,567 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-26 07:12:21,569 INFO supervisord started with pid 1
+2025-05-26 07:12:22,583 INFO spawned: 'master' with pid 20
+2025-05-26 07:12:22,594 INFO spawned: 'rsyslog' with pid 21
+2025-05-26 07:12:23,597 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-26 07:12:23,597 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-26 10:17:08,849 WARN received SIGTERM indicating exit request
+2025-05-26 10:17:08,853 INFO waiting for master, rsyslog to die
+2025-05-26 10:17:09,766 INFO stopped: rsyslog (exit status 0)
+2025-05-26 10:17:09,771 WARN stopped: master (terminated by SIGTERM)
+2025-05-27 02:00:55,704 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-27 02:00:55,705 INFO supervisord started with pid 1
+2025-05-27 02:00:56,721 INFO spawned: 'master' with pid 19
+2025-05-27 02:00:56,735 INFO spawned: 'rsyslog' with pid 20
+2025-05-27 02:00:57,740 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 02:00:57,741 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 02:49:05,945 WARN received SIGTERM indicating exit request
+2025-05-27 02:49:05,947 INFO waiting for master, rsyslog to die
+2025-05-27 02:49:06,853 INFO stopped: rsyslog (exit status 0)
+2025-05-27 02:49:06,861 WARN stopped: master (terminated by SIGTERM)
+2025-05-27 02:49:09,970 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-27 02:49:09,971 INFO supervisord started with pid 1
+2025-05-27 02:49:10,993 INFO spawned: 'master' with pid 20
+2025-05-27 02:49:11,005 INFO spawned: 'rsyslog' with pid 21
+2025-05-27 02:49:12,010 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 02:49:12,011 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 02:53:23,922 WARN received SIGTERM indicating exit request
+2025-05-27 02:53:23,924 INFO waiting for master, rsyslog to die
+2025-05-27 02:53:24,831 INFO stopped: rsyslog (exit status 0)
+2025-05-27 02:53:24,834 WARN stopped: master (terminated by SIGTERM)
+2025-05-27 02:54:23,717 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-27 02:54:23,718 INFO supervisord started with pid 1
+2025-05-27 02:54:24,740 INFO spawned: 'master' with pid 20
+2025-05-27 02:54:24,751 INFO spawned: 'rsyslog' with pid 21
+2025-05-27 02:54:25,759 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 02:54:25,761 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 03:10:41,422 WARN received SIGTERM indicating exit request
+2025-05-27 03:10:41,423 INFO waiting for master, rsyslog to die
+2025-05-27 03:10:42,331 INFO stopped: rsyslog (exit status 0)
+2025-05-27 03:10:42,335 WARN stopped: master (terminated by SIGTERM)
+2025-05-27 03:15:55,093 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-27 03:15:55,095 INFO supervisord started with pid 1
+2025-05-27 03:15:56,115 INFO spawned: 'master' with pid 21
+2025-05-27 03:15:56,125 INFO spawned: 'rsyslog' with pid 22
+2025-05-27 03:15:57,128 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-27 03:15:57,129 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 12:45:08,493 WARN received SIGTERM indicating exit request
+2025-05-28 12:45:08,498 INFO waiting for master, rsyslog to die
+2025-05-28 12:45:09,406 INFO stopped: rsyslog (exit status 0)
+2025-05-28 12:45:09,410 WARN stopped: master (terminated by SIGTERM)
+2025-05-28 12:45:20,407 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-28 12:45:20,408 INFO supervisord started with pid 1
+2025-05-28 12:45:21,429 INFO spawned: 'master' with pid 20
+2025-05-28 12:45:21,441 INFO spawned: 'rsyslog' with pid 21
+2025-05-28 12:45:22,444 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 12:45:22,444 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 12:47:25,807 WARN received SIGTERM indicating exit request
+2025-05-28 12:47:25,809 INFO waiting for master, rsyslog to die
+2025-05-28 12:47:26,718 INFO stopped: rsyslog (exit status 0)
+2025-05-28 12:47:26,721 WARN stopped: master (terminated by SIGTERM)
+2025-05-28 12:47:38,113 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-28 12:47:38,114 INFO supervisord started with pid 1
+2025-05-28 12:47:39,129 INFO spawned: 'master' with pid 20
+2025-05-28 12:47:39,141 INFO spawned: 'rsyslog' with pid 21
+2025-05-28 12:47:40,143 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 12:47:40,145 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 15:52:09,387 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-28 15:52:09,403 INFO supervisord started with pid 1
+2025-05-28 15:52:10,470 INFO spawned: 'master' with pid 20
+2025-05-28 15:52:10,536 INFO spawned: 'rsyslog' with pid 21
+2025-05-28 15:52:11,545 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-28 15:52:11,554 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-03 15:41:28,843 WARN received SIGTERM indicating exit request
+2025-06-03 15:41:28,956 INFO waiting for master, rsyslog to die
+2025-06-03 15:41:29,875 INFO stopped: rsyslog (exit status 0)
+2025-06-03 15:41:29,937 WARN stopped: master (terminated by SIGTERM)
+2025-06-03 15:41:38,646 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-06-03 15:41:38,649 INFO supervisord started with pid 1
+2025-06-03 15:41:39,657 INFO spawned: 'master' with pid 21
+2025-06-03 15:41:39,670 INFO spawned: 'rsyslog' with pid 22
+2025-06-03 15:41:40,673 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-03 15:41:40,677 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-09 09:07:27,474 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-06-09 09:07:27,475 INFO supervisord started with pid 1
+2025-06-09 09:07:28,492 INFO spawned: 'master' with pid 19
+2025-06-09 09:07:28,504 INFO spawned: 'rsyslog' with pid 20
+2025-06-09 09:07:29,506 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-09 09:07:29,507 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-09 10:09:08,222 WARN received SIGTERM indicating exit request
+2025-06-09 10:09:08,225 INFO waiting for master, rsyslog to die
+2025-06-09 10:09:09,136 INFO stopped: rsyslog (exit status 0)
+2025-06-09 10:09:09,140 WARN stopped: master (terminated by SIGTERM)
+2025-06-10 06:00:33,419 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-06-10 06:00:33,420 INFO supervisord started with pid 1
+2025-06-10 06:00:34,442 INFO spawned: 'master' with pid 20
+2025-06-10 06:00:34,451 INFO spawned: 'rsyslog' with pid 21
+2025-06-10 06:00:35,453 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-10 06:00:35,454 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-10 06:29:31,265 WARN received SIGTERM indicating exit request
+2025-06-10 06:29:31,266 INFO waiting for master, rsyslog to die
+2025-06-10 06:29:32,175 INFO stopped: rsyslog (exit status 0)
+2025-06-10 06:29:32,178 WARN stopped: master (terminated by SIGTERM)
+2025-06-10 06:29:36,366 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-06-10 06:29:36,367 INFO supervisord started with pid 1
+2025-06-10 06:29:37,389 INFO spawned: 'master' with pid 20
+2025-06-10 06:29:37,402 INFO spawned: 'rsyslog' with pid 21
+2025-06-10 06:29:38,404 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-10 06:29:38,404 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-10 06:32:08,886 WARN received SIGTERM indicating exit request
+2025-06-10 06:32:08,888 INFO waiting for master, rsyslog to die
+2025-06-10 06:32:09,796 INFO stopped: rsyslog (exit status 0)
+2025-06-10 06:32:09,801 WARN stopped: master (terminated by SIGTERM)
+2025-06-10 06:38:26,790 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-06-10 06:38:26,791 INFO supervisord started with pid 1
+2025-06-10 06:38:27,812 INFO spawned: 'master' with pid 20
+2025-06-10 06:38:27,836 INFO spawned: 'rsyslog' with pid 21
+2025-06-10 06:38:28,839 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-10 06:38:28,840 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-17 05:51:14,814 WARN received SIGTERM indicating exit request
+2025-06-17 05:51:14,819 INFO waiting for master, rsyslog to die
+2025-06-17 05:51:15,733 INFO stopped: rsyslog (exit status 0)
+2025-06-17 05:51:15,737 WARN stopped: master (terminated by SIGTERM)
+2025-07-29 01:55:07,404 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-07-29 01:55:07,405 INFO supervisord started with pid 1
+2025-07-29 01:55:08,426 INFO spawned: 'master' with pid 19
+2025-07-29 01:55:08,436 INFO spawned: 'rsyslog' with pid 20
+2025-07-29 01:55:09,438 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-07-29 01:55:09,438 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-07-30 03:13:57,830 WARN received SIGTERM indicating exit request
+2025-07-30 03:13:57,832 INFO waiting for master, rsyslog to die
+2025-07-30 03:13:58,739 INFO stopped: rsyslog (exit status 0)
+2025-07-30 03:13:58,741 WARN stopped: master (terminated by SIGTERM)
+2025-08-05 02:28:37,600 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-05 02:28:37,601 INFO supervisord started with pid 1
+2025-08-05 02:28:38,622 INFO spawned: 'master' with pid 20
+2025-08-05 02:28:38,633 INFO spawned: 'rsyslog' with pid 21
+2025-08-05 02:28:39,634 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-05 02:28:39,635 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-06 01:48:12,152 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-06 01:48:12,154 INFO supervisord started with pid 1
+2025-08-06 01:48:13,178 INFO spawned: 'master' with pid 20
+2025-08-06 01:48:13,191 INFO spawned: 'rsyslog' with pid 21
+2025-08-06 01:48:14,195 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-06 01:48:14,196 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-06 05:02:18,808 WARN received SIGTERM indicating exit request
+2025-08-06 05:02:18,810 INFO waiting for master, rsyslog to die
+2025-08-06 05:02:19,718 INFO stopped: rsyslog (exit status 0)
+2025-08-06 05:02:19,723 WARN stopped: master (terminated by SIGTERM)
+2025-08-06 05:31:34,292 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-06 05:31:34,293 INFO supervisord started with pid 1
+2025-08-06 05:31:35,308 INFO spawned: 'master' with pid 20
+2025-08-06 05:31:35,323 INFO spawned: 'rsyslog' with pid 21
+2025-08-06 05:31:36,329 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-06 05:31:36,330 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 05:51:13,209 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-08 05:51:13,210 INFO supervisord started with pid 1
+2025-08-08 05:51:14,216 INFO spawned: 'master' with pid 20
+2025-08-08 05:51:14,221 INFO spawned: 'rsyslog' with pid 21
+2025-08-08 05:51:15,227 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 05:51:15,227 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 06:00:05,963 WARN received SIGTERM indicating exit request
+2025-08-08 06:00:05,964 INFO waiting for master, rsyslog to die
+2025-08-08 06:00:06,871 INFO stopped: rsyslog (exit status 0)
+2025-08-08 06:00:06,876 WARN stopped: master (terminated by SIGTERM)
+2025-08-08 06:17:41,183 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-08 06:17:41,184 INFO supervisord started with pid 1
+2025-08-08 06:17:42,194 INFO spawned: 'master' with pid 20
+2025-08-08 06:17:42,199 INFO spawned: 'rsyslog' with pid 21
+2025-08-08 06:17:43,200 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 06:17:43,201 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 11:22:33,310 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-08-08 11:22:33,313 INFO supervisord started with pid 1
+2025-08-08 11:22:34,318 INFO spawned: 'master' with pid 20
+2025-08-08 11:22:34,326 INFO spawned: 'rsyslog' with pid 21
+2025-08-08 11:22:35,329 INFO success: master entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-08 11:22:35,360 INFO success: rsyslog entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-12 12:18:23,320 WARN received SIGTERM indicating exit request
+2025-08-12 12:18:23,340 INFO waiting for master, rsyslog to die
+2025-08-12 12:18:24,252 INFO stopped: rsyslog (exit status 0)
+2025-08-12 12:18:24,262 WARN stopped: master (terminated by SIGTERM)

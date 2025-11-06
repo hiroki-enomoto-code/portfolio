@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.layout {
+	display: flex;
+	justify-content: space-between;
+
+	&Tags {
+		color: $color-main;
+		display: flex;
+		margin: 0 0 24px;
+
+		li {
+			padding-top: 10px;
+
+			&.is-active {
+				position: relative;
+
+				&::after {
+					background-color: $color-main;
+					content: "";
+					height: 5px;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+			}
+
+			+ li {
+				margin-left: 24px;
+			}
+		}
+	}
+
+	&Single {
+		background: #fff;
+		padding: 18px;
+		width: 100%;
+	}
+
+	&Left {
+		background: #fff;
+		padding: 18px;
+		width: 70%;
+	}
+
+	&Right {
+		width: 27%;
+	}
+}

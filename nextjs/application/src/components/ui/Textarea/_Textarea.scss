@@ -1,0 +1,35 @@
+@use "../../../scss/global" as *;
+
+.m-Textarea{
+    position: relative;
+    label{
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+    textarea{
+        width: 100%;
+        padding: $space-xs;
+        border: 1px solid $color-text-placeholder;
+        border-radius: $radius-xs;
+        font-size: 14px;
+        transition: all 0.3s ease;
+		height: auto;
+        &:focus{
+            border: 1px solid $color-border-focus;
+        }
+        &:disabled{
+            background-color: $color-bg-base;
+            color: $color-text-disabled;
+            cursor: not-allowed;
+        }
+        &::placeholder{
+            color: $color-text-placeholder;
+        }
+    }
+    &_error{
+        color: $color-danger;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+}

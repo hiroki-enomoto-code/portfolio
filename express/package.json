@@ -1,0 +1,31 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/app.ts",
+        "build": "tsc",
+        "start": "node dist/app.js",
+        "clean": "rimraf dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.3.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "ioredis": "^5.2.3",
+        "mysql2": "^3.14.3",
+        "nodemon": "^2.0.22",
+        "redis": "^3.1.2",
+        "socket.io": "^4.1.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2"
+    },
+    "volta": {
+        "node": "20.9.0"
+    }
+}

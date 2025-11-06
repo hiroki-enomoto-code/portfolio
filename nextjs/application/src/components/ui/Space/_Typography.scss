@@ -1,0 +1,63 @@
+@use "../../../scss/global" as *;
+
+.m-Typography{
+    &-Title{
+        font-weight: $font-bold;
+        &.level-1 {
+            font-size: 36px;
+        }
+        &.level-2 {
+            font-size: 30px;
+        }
+        &.level-3 {
+            font-size: 24px;
+        }
+        &.level-4 {
+            font-size: 20px;
+        }
+        &.level-5 {
+            font-size: 18px;
+        }
+    }
+    &-Paragraph {
+        font-size: 16px;
+
+        &.size-{
+            &-xxs {
+                font-size: 10px;
+            }
+            &-xs {
+                font-size: 12px;
+            }
+            &-sm {
+                font-size: 14px;
+            }
+            &-md {
+                font-size: 16px;
+            }
+            &-lg {
+                font-size: 18px;
+            }
+            &-xl {
+                font-size: 20px;
+            }
+        }
+
+        &.is-ellipsis{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &.clamp-1{
+                -webkit-line-clamp: 1;
+            }
+            &.clamp-2{
+                -webkit-line-clamp: 2;
+            }
+            &.clamp-3{
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+}

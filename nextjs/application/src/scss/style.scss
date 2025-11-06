@@ -1,0 +1,50 @@
+@use "./modules/creativereset";
+@use "./modules/fontFace";
+@use "./modules/reset";
+@use "./modules/helper";
+@use "./modules/base";
+
+@use "./components/templetes/Header";
+@use "./components/templetes/Main";
+@use "./components/templetes/Navi";
+@use "../components/templetes/Nickname/Nickname";
+
+@use "./components/ui/Search";
+@use "./components/ui/FixedAction";
+@use "./components/ui/BeatEditor";
+@use "./components/ui/Modal";
+@use "../components//ui/Button/Button";
+@use "./components/ui/Popup";
+@use "../components//ui/TextField/TextField";
+@use "../components/ui/Avatar/Avatar";
+@use "../components/ui/Skeleton/Skeleton";
+@use "../components/ui/Notification/Notification";
+@use "../components/ui/Radio/Radio";
+@use "../components/ui/Textarea/Textarea";
+@use "../components/ui/Swich/Swich";
+@use "../components/ui/Breadcrumbs/Breadcrumbs";
+@use "../components/ui/DrawingBoard/DrawingBoard";
+@use "../components/ui/Form/Form";
+@use "../components/ui/Typography/Typography";
+@use "../components/ui/Table/Table";
+@use "../components/ui/Tab/Tab";
+
+@use "./components/customUi/FileUpload";
+@use "./components/customUi/Emoji";
+@use "./components/customUi/Reaction";
+
+@use "../components/templetes/beat/BeatItem/BeatItem";
+
+// @use "./components/ui/Select";
+// @use "./components/ui/Tag";
+// @use "./components/ui/Radio";
+// @use "./components/ui/Checkbox";
+// @use "./components/ui/Tooltip";
+
+@use "./pages/index";
+@use "./pages/login";
+@use "./pages/app";
+@use "./pages/componets";
+@use "./pages/register";
+@use "../app/(main)/quiz/page";
+@use "../app/(default)/amusement/amusement";

@@ -1,0 +1,45 @@
+@use "../../../scss/global" as *;
+
+.m-Swich {
+    width: fit-content;
+    height: 40px;
+    border-radius: $radius-circle;
+    background-color: $bg-gray-lightest;
+    padding: $space-xxs;
+    display: block;
+
+    &_inner {
+        position: relative;
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    &_item {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        font-size: 10px;
+        padding: 0 10px;
+    }
+
+    .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $bg-white;
+        border-radius: $radius-circle;
+        transition: 0.3s;
+        z-index: 0;
+
+        &.checked {
+            left: 50%;
+        }
+    }
+}

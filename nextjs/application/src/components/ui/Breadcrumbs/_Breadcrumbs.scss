@@ -1,0 +1,42 @@
+@use "../../../scss/global" as *;
+
+.m-Breadcrumbs {
+    margin-bottom: $space-sm;
+    &_inner{
+        display: flex;
+        align-items: flex-start;
+    }
+    &_back{
+        width: fit-content;
+        margin-right: $space-sm;
+    }
+    &List{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3px;
+        &_item{
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            a{
+                color: $text-sub;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &_arrow{
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            padding: $space-xs;
+            svg{
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

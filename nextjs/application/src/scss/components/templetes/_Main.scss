@@ -1,0 +1,11 @@
+@use "@/scss/global" as *;
+
+.m-Main{
+    padding-top: 60px;
+    &_inner{
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 20px 100px;
+        position: relative;
+    }
+}

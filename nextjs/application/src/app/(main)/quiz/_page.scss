@@ -1,0 +1,664 @@
+@use "../../../scss/global" as *;
+
+.page-quiz{
+    &List{
+        gap : $space-s;
+        display: flex;
+        flex-wrap: wrap;
+        &_item{
+            width: calc(50% - ($space-s * 0.5));
+        }
+    }
+    .QuizListItem{
+        background-color: $bg-white;
+		box-shadow: $shadow-elevation-level3;
+		border-radius: $radius-sm;
+		border: 1px solid $color-content-stroke-dark;
+		overflow: hidden;
+		width: 100%;
+		padding: $space-sm;
+        &_thumbnail{
+            border-radius: $radius-xs;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16/9;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &_detail{
+            margin-top: $space-xs;
+        }
+        &_title{
+            font-size: 16px;
+        }
+        &Data{
+            display: flex;
+            flex-wrap: wrap;
+            gap: $space-xs;
+            margin-top: $space-xs;
+            &_item{
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+            }
+        }
+
+        &Links{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: $space-xs;
+            gap: $space-xs;
+            &_item{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &-top{
+        max-width: 800px;
+        padding: $space-sm;
+        width: 100%;
+        margin: auto;
+    }
+
+    &-edit{
+        max-width: 800px;
+        padding: $space-sm;
+        width: 100%;
+        margin: auto;
+        &Form{
+            display: flex;
+            gap: $space-dm;
+            align-items: flex-start;
+
+            &_inner{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+            }
+
+            &Side{
+                max-width: 250px;
+                width: 100%;
+                position: sticky;
+                top: 100px;
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+                &Submit{
+                    display: flex;
+                    gap: $space-xs;
+                    &_button{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                &Toc{
+                    &List{
+                        padding-left: $space-s;
+                        display: flex;
+                        flex-direction: column;
+                        &_item{
+                            a{
+                                display: block;
+                                padding: $space-xs;
+                                font-size: 12px;
+                                transition: 0.3s;
+                                border-radius: $radius-xxs;
+                                &:hover{
+                                    background-color: $bg-gray-lightest;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_box{
+                border: 1px solid $color-content-stroke;
+                background-color: $bg-white;
+                border-radius: $radius-sm;
+                padding: $space-sm;
+                width: 100%;
+
+                &:hover{
+                    .page-quiz-editFormHead_deleteButton{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &_title{
+                font-weight: $font-bold;
+                font-size: 20px;
+            }
+
+            &Head{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &_left{
+                    display: flex;
+                    align-items: center;
+                    gap: $space-xs;
+                }
+                &_deleteButton{
+                    transition: 0.3s;
+                    opacity: 0;
+                    svg{
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                &_toggle{
+                    &.is-close{
+                        svg{
+                            transform: rotate(0);
+                        }
+                    }
+                    svg{
+                        transition: 0.3s;
+                        transform: rotate(90deg);
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+
+            &_content{
+                margin-top: $space-dm;
+                display: flex;
+                flex-direction: column;
+                gap: $space-dm;
+
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .upload{
+                    &_button{
+                        border: 1px solid $color-content-stroke;
+                        background-color: $bg-white;
+                        border-radius: $radius-sm;
+                        padding: $space-sm;
+                        font-size: 12px;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: $bg-gray-lightest;
+                        }
+                    }
+                    &_preview{
+                        position: relative;
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        border-radius: $radius-xs;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        &_delete{
+                            z-index: $z-index-8;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: $bg-white;
+                            border-radius: $radius-circle;
+                            padding: $space-xxs;
+                            cursor: pointer;
+                            box-shadow: $shadow-elevation-level1;
+                            svg{
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+                }
+
+                .select{
+                    margin-top: $space-xs;
+                    &-option{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        gap: $space-xs;
+                        &_radio{
+                            width: fit-content;
+                        }
+                        &_text{
+                            flex: 1;
+                        }
+                        &_delete{
+                            color: $text-sub;
+                        }
+                    }
+                    &-input{
+                        display: flex;
+                    }
+                }
+
+                .time{
+                    display: flex;
+                    align-items: center;
+                    gap: $space-xs;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &-edit-list{
+        max-width: 800px;
+        padding: $space-sm;
+        width: 100%;
+        margin: auto;
+        .table{
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+            &Head{
+                background-color: $bg-gray-lightest;
+                border-radius: $radius-s;
+                border: 1px solid $color-content-stroke;
+                display: grid;
+                grid-template-columns: 1.9fr 0.6fr 0.5fr 0.7fr 0.5fr 0.3fr;
+                &Item{
+                    padding: $space-sm;
+                    font-size: 12px;
+                    font-weight: $font-bold;
+                    text-align: center;
+                }
+            }
+            &Body{
+                display: flex;
+                flex-direction: column;
+                gap: $space-s;
+                margin-top: $space-sm;
+                &Item{
+                    grid-template-columns: 1.9fr 0.6fr 0.5fr 0.7fr 0.5fr 0.3fr;
+                    border-radius: $radius-s;
+                    border: 1px solid $color-content-stroke;
+                    display: grid;
+                    transition: 0.3s;
+
+                    &_column{
+                        padding: $space-xs;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &.is-title{
+                            justify-content: flex-start;
+                            padding-left: $space-dm;
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .is-moreIcon{
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+
+        &-popup{
+            display: flex;
+            flex-direction: column;
+            gap: $space-xxs;
+            min-width: 100px;
+            max-height: 70dvh;
+            &_button{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: $space-xxs;
+                text-align: center;
+                &.is-delete{
+                    color: $color-danger;
+                }
+
+                &_icon{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    &-challenge{
+        max-width: 600px;
+        padding: $space-sm;
+        width: 100%;
+        margin: auto;
+        &Start{
+            &_thumbnail{
+                border-radius: $radius-xs;
+                overflow: hidden;
+                width: 100%;
+                aspect-ratio: 16/9;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            &_title{
+                font-size: 20px;
+                margin-top: $space-sm;
+            }
+    
+            &_description{
+                margin-top: $space-sm;
+                font-size: 14px;
+                white-space: pre;
+            }
+    
+            &_counts{
+                margin-top: $space-xs;
+                font-size: 20px;
+                font-weight: $font-bold;
+                text-align: center;
+            }
+    
+            &_startButton{
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+                margin: $space-xs auto 0;
+            }
+        }
+        &Playing{
+            &_title{
+                text-align: center;
+                font-size: 14px;
+            }
+            &_qCount{
+                text-align: center;
+                margin-top: $space-sm;
+                font-size: 16px;
+            }
+            &_timer{
+                margin-top: $space-sm;
+                text-align: center;
+                span{
+                    font-size: 48px;
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-weight: $font-bold;
+                }
+            }
+            &Box{
+                max-width: 500px;
+                width: 100%;
+                margin: $space-dm auto 0;
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+            }
+            &_question{
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.8;
+            }
+            &_button{
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+                width: 100%;
+                margin-top: $space-sm;
+            }
+            &_musicThumb{
+                border-radius: $radius-xs;
+                overflow: hidden;
+                width: 100%;
+                aspect-ratio: 16/9;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &Result{
+            &_title{
+                font-weight: $font-bold;
+                text-align: center;
+                font-size: 24px;
+            }
+            &_attempt{
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                margin: $space-xs auto 0;
+            }
+            &_answer{
+                text-align: center;
+                margin-top: $space-xs;
+                font-size: 16px;
+            }
+            &_rank{
+                text-align: center;
+                margin-top: $space-xs;
+                font-size: 16px;
+            }
+            &List{
+                margin: $space-dm auto 0;
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+                max-width: 500px;
+                width: 100%;
+                &_item{
+                    background-color: $bg-gray-lightest;
+                    border-radius: $radius-sm;
+                    padding: $space-sm;
+                    display: grid;
+                    grid-template-columns: 60px 1fr;
+                    grid-template-areas:
+                    "q q"
+                    "icon answer"
+                    "icon correct";
+                    &.is-collect{
+                        background-color: $color-danger-light;
+                        .page-quiz-challengeResultList_icon{
+                            svg{
+                                color: red;
+                            }
+                        }
+                    }
+                    &.is-incollect{
+                        background-color: $color-success-light;
+                        .page-quiz-challengeResultList_icon{
+                            svg{
+                                color: blue;
+                            }
+                        }
+                    }
+                }
+                &_q{
+                    grid-area: q;
+                    font-size: 12px;
+                    margin-bottom: $space-s;
+                    display: flex;
+                    gap: $space-xxs;
+                    >span{
+                        font-weight: $font-bold;
+                        font-size: 16px;
+                    }
+                }
+                &_icon{
+                    grid-area: icon;
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+                &_correct{
+                    grid-area: correct;
+                    font-size: 16px;
+                    margin-top: $space-xxs;
+                }
+                &_answer{
+                    grid-area: answer;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &-attempt{
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+        &_return{
+            width: fit-content;
+            margin-bottom: $space-sm;
+        }
+        &Quiz{
+            &_thumbnail{
+                border-radius: $radius-xs;
+                overflow: hidden;
+                width: 100%;
+                aspect-ratio: 16/9;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &_title{
+                font-size: 20px;
+                font-weight: $font-bold;
+                margin-top: $space-xs;
+            }
+            &_button{
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+                margin: $space-xs auto 0;
+            }
+        }
+        &Tab{
+            display: flex;
+            justify-content: center;
+            gap: $space-sm;
+            margin-top: $space-xl;
+        }
+        &Head{
+            margin-top: $space-sm;
+            display: grid;
+            grid-template-columns: 40px 1fr 55px 100px;
+            border-radius: $radius-xs;
+            border: 1px solid $color-content-stroke;
+            background-color: $bg-gray-lightest;
+            font-size: 12px;
+
+            @include is-sp{
+                grid-template-columns: 30px 1fr 55px 80px;
+            }
+
+            &.is-myattempt{
+                grid-template-columns: 1fr 55px 100px 70px;
+                @include is-sp{
+                    grid-template-columns: 1fr 55px 100px 70px;
+                }
+            }
+            &_item{
+                display: flex;
+                justify-content: center;
+                padding: $space-xs;
+                @include is-sp{
+                    padding: $space-xxs;
+                }
+                &.is-name{
+                    justify-content: flex-start;
+                }
+            }
+        }
+        &List{
+            margin-top: $space-sm;
+            display: flex;
+            flex-direction: column;
+            gap: $space-xs;
+            &_item{
+                display: grid;
+                grid-template-columns: 40px 1fr 55px 100px;
+                border-radius: $radius-xs;
+                border: 1px solid $color-content-stroke;
+                background-color: $bg-white;
+
+                @include is-sp{
+                    font-size: 12px;
+                    grid-template-columns: 30px 1fr 55px 80px;
+                }
+
+                &.is-myattempt{
+                    grid-template-columns: 1fr 55px 100px 70px;
+                    @include is-sp{
+                        grid-template-columns: 1fr 55px 100px 70px;
+                    }
+                }
+
+                > * {
+                    padding: $space-xs;
+                    display: flex;
+                    align-items: center;
+                    @include is-sp{
+                        padding: $space-xxs;
+                    }
+                }
+            }
+
+            &_rank{
+                justify-content: center;
+            }
+
+            &_user{
+                gap: $space-xs;
+            }
+
+            &_score{
+                justify-content: center;
+            }
+
+            &_qa{
+                justify-content: center;
+            }
+
+            &_title{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &_result{
+                flex-direction: column;
+                align-items: unset;
+            }
+        }
+        &_modal{
+            overflow: auto;
+            max-height: 70dvh;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@font-face {
+    font-display: swap;
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/NotoSansJP/NotoSansJP-Regular--ss.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../fonts/NotoSansJP/NotoSansJP-SemiBold--ss.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../fonts/NotoSansJP/NotoSansJP-Bold--ss.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/Poppins/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../fonts/Poppins/Poppins-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../fonts/Poppins/Poppins-Bold.woff") format("woff");
+}

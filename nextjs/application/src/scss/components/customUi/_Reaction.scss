@@ -1,0 +1,35 @@
+@use "@/scss/global" as *;
+
+.m-Reaction{
+    display: flex;
+    gap: $space-xxs;
+    align-items: center;
+    flex-wrap: wrap;
+    &Button{
+        border-radius: $radius-s;
+        background-color: $bg-base;
+        padding: 4px 8px;
+        width: fit-content;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_icon{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &Item{
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        &_icon{
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+        &_count{
+            font-size: 10px;
+        }
+    }
+}

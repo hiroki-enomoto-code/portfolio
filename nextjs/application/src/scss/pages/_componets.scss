@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+#page-componets{
+    .componets{
+
+    }
+
+    .beatList{
+        gap : $space-s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 624px;
+        width: 100%;
+        margin: auto;
+    }
+}

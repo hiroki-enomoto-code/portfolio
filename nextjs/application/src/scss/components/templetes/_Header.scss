@@ -1,0 +1,265 @@
+@use "@/scss/global" as *;
+
+.m-Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-9;
+    background-color: $bg-white;
+
+    &_inner {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        border-radius: $radius-dm;
+
+        &Right {
+            display: flex;
+            gap: $space-sm;
+            align-items: center;
+        }
+    }
+
+    &_icon {
+        width: 40px;
+        height: 40px;
+        border-radius: $radius-circle;
+        object-fit: cover;
+    }
+
+    &_logo {
+        width: 150px;
+    }
+
+    &Menu {
+        &Button {
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            &.active {
+                .dot {
+                    &:nth-child(1) {
+                        transform: scale(0);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(8px);
+                    }
+
+                    &:nth-child(3) {
+                        transform: scale(0);
+                    }
+
+                    &:nth-child(4) {
+                        transform: translateX(8px);
+                    }
+
+                    &:nth-child(5) {
+                        transform: scale(1.2);
+                    }
+
+                    &:nth-child(6) {
+                        transform: translateX(-8px);
+                    }
+
+                    &:nth-child(7) {
+                        transform: scale(0);
+                    }
+
+                    &:nth-child(8) {
+                        transform: translateY(-8px);
+                    }
+
+                    &:nth-child(9) {
+                        transform: scale(0);
+                    }
+                }
+            }
+
+            &_inner {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .dot {
+                width: 100%;
+                height: 100%;
+                background-color: $bg-dark;
+                border-radius: 50%;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+        }
+        &Box{
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            max-width: 600px;
+            background-color: $bg-white;
+            border: 1px solid $color-content-stroke;
+            border-radius: $radius-xs;
+            padding: $space-sm;
+            box-shadow: $shadow-elevation-level3;
+            &_inner{
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+            }
+        }
+        &List{
+            display: flex;
+            flex-wrap: wrap;
+            gap: $radius-sm;
+            &Item{
+                a, button{
+                    width: fit-content;
+                    padding: $space-xxs;
+                    display: block;
+                    &:hover{
+                        background-color: $bg-gray-lightest;
+                    }
+                }
+                &_child{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    &Mode {
+        width: 100px;
+        height: 40px;
+        border-radius: $radius-circle;
+        background-color: $bg-gray-lightest;
+        padding: $space-xxs;
+        display: block;
+
+        &_inner {
+            position: relative;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        &_item {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: $bg-white;
+            border-radius: $radius-circle;
+            transition: 0.3s;
+            z-index: 0;
+
+            &.is-dark {
+                left: 50%;
+            }
+        }
+    }
+
+    &Profile {
+        width: 100vw;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: $z-index-10;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: $space-lg;
+
+        &_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        &_inner {
+            position: relative;
+            z-index: 1;
+            background-color: $bg-white;
+            max-width: 500px;
+            width: 100%;
+            height: 100%;
+            padding: $space-sm;
+            border-radius: $radius-lg;
+        }
+
+        &Data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: $space-s;
+            text-align: center;
+        }
+
+        &Image {
+            width: fit-content;
+            margin: auto;
+        }
+
+        &_editButton {
+            width: fit-content;
+            margin: auto;
+        }
+
+        &Edit {
+            &Head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &Form {
+                display: flex;
+                flex-direction: column;
+                gap: $space-sm;
+                margin-top: $space-sm;
+
+                &Image {
+                    position: relative;
+                    width: 80px;
+                    height: 80px;
+
+                    input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

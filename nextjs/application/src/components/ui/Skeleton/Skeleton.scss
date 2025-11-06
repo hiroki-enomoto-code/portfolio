@@ -1,0 +1,26 @@
+@use "../../../scss/global" as *;
+
+@keyframes loading{
+	0%{
+		background-position: left 100% top;
+	}
+	
+	100%{
+		background-position: left 0 top;
+	}
+}
+
+$color01: rgba(#000, 0.06);
+$color02: rgba(#000, 0.15);
+
+.m-Skeleton {
+	animation: loading 2s ease forwards infinite;
+	background-image: linear-gradient(90deg, $color01 0, $color01 25%, $color02 37.5%, $color01 50%, $color01 100%);
+	background-position: left 100% top;
+	background-repeat: no-repeat;
+	background-size: 400% 100%;
+	border-radius: $radius-xxs;
+	display: block;
+	height: 100%;
+	width: 100%;
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@use "variables" as *;
+
+@mixin is-sp {
+	@media (min-width: 1px) and (max-width: $break-sp) {
+		@content;
+	}
+}
+
+@mixin is-tb {
+	@media (min-width: 1px) and (max-width: $break-tablet) {
+		@content;
+	}
+}
+
+@mixin is-pc {
+	@media (min-width: ($break-tablet + 1px)) {
+		@content;
+	}
+}
+
+@mixin fontMedium {
+	font-weight: 500;
+}
+
+@mixin fontBold {
+	font-weight: 600;
+}

@@ -1,0 +1,64 @@
+@use "../../../scss/global" as *;
+
+.m-Notification{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	z-index: 9999999999999;
+	&.top-center{
+		top: 10vh;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&.top-left{
+		top: 0;
+		left: 0;
+	}
+	&.top-right{
+		top: 0;
+		right: 0;
+	}
+	&.bottom-center{
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&.bottom-left{
+		bottom: 0;
+		left: 0;
+	}
+	&.bottom-right{
+		bottom: 0;
+		right: 0;
+	}
+
+	&Item{
+		margin-bottom: $space-s;
+
+		&_inner{
+			width: 300px;
+			padding: $space-xs;
+			border-radius: $radius-dm;
+			box-shadow: $shadow-elevation-level3;
+			border: 1px solid $color-content-stroke-dark;
+			border-left: 3px solid $color-content-stroke-dark;
+			background-color: $bg-white;
+			&Box{
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&_icon{
+			//flex-shrink-0;
+			flex-shrink: 0;
+		}
+
+		&_message{
+			width: 100%;
+			margin-left: $space-xs;
+			white-space: pre;
+			word-break: break-all;
+		}
+	}
+}

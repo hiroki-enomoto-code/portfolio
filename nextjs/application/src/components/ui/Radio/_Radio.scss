@@ -1,0 +1,98 @@
+@use "../../../scss/global" as *;
+
+.m-Radio{
+	&Group{
+		display: flex;
+		flex-direction: column;
+		gap: $space-xxs;
+		width: 100%;
+		margin: auto;
+	}
+	&Button{
+		padding: $space-xs;
+		border-radius: $radius-sm;
+		transition: 0.3s;
+		&:hover{
+			background-color: $bg-gray-lightest;
+		}
+
+		&.size-md{
+			padding: $space-xs;
+			label{
+				.radio{
+					width: 24px;
+					height: 24px;
+					&::after{
+						width: 18px;
+						height: 18px;
+					}
+				}
+			}
+		}
+
+		&.size-sm{
+			padding: $space-xxs;
+			label{
+				.radio{
+					width: 16px;
+					height: 16px;
+					&::after{
+						width: 10px;
+						height: 10px;
+					}
+				}
+
+				.label{
+					font-size: 12px;
+					line-height: 1.5;
+					margin-top: 0;
+				}
+			}
+		}
+
+		input{
+			opacity: 0;
+			width: 0;
+			left: 0;
+			position: absolute;
+			&:checked + .radio{
+				border: 1px solid $color-primary;
+				&::after{
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+		label{
+			display: flex;
+			position: relative;
+			gap: $space-xs;
+			.radio{
+				width: 24px;
+				height: 24px;
+				border-radius: $radius-circle;
+				background-color: $bg-white;
+				border: 1px solid $color-content-stroke;
+				position: relative;
+				&::after{
+					position: absolute;
+					width: 18px;
+					height: 18px;
+					border-radius: $radius-circle;
+					content: '';
+					background-color: $color-primary;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) scale(0);
+					transition: 0.3s;
+				}
+			}
+	
+			.label{
+				font-size: 14px;
+				line-height: 1.5;
+				flex: 1;
+				margin-top: 2px;
+			}
+		}
+	}
+}

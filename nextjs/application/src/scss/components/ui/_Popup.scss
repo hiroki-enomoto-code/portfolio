@@ -1,0 +1,20 @@
+@use "@/scss/global" as *;
+
+.m-Popup{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: $z-index-10;
+    height: fit-content;
+    width: fit-content;
+    &Box{
+        z-index: $z-index-8;
+        width: 100%;
+        max-width: 600px;
+        border-radius: $radius-s;
+        box-shadow: $shadow-elevation-level3;
+        background-color: $bg-white;
+        padding: $space-s;
+        border: 1px solid $color-content-stroke;
+    }
+}

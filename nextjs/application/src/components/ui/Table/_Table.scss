@@ -1,0 +1,96 @@
+@use "../../../scss/global" as *;
+
+.m-Table{
+    font-size: 16px;
+    position: relative;
+
+    &.size-{
+        &m{
+            font-size: 16px;
+            .m-Table-Body{
+                .m-Table-Cell{
+                    padding: $space-s;
+                }
+            }
+        }
+        &s{
+            font-size: 14px;
+            .m-Table-Body{
+                .m-Table-Cell{
+                    padding: $space-xs;
+                }
+            }
+        }
+        &xs{
+            font-size: 12px;
+            .m-Table-Body{
+                .m-Table-Cell{
+                    padding: $space-xxs;
+                }
+            }
+        }
+        &xxs{
+            font-size: 10px;
+            .m-Table-Body{
+                .m-Table-Cell{
+                    padding: $space-xxs;
+                }
+            }
+        }
+    }
+
+    &-Header{
+        border-bottom: 1px solid $color-content-stroke;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: $bg-white;
+    }
+
+    &-Body{
+        display: flex;
+        flex-direction: column;
+        margin-top: $space-xs;
+        width: 100%;
+    }
+
+    &-Row{
+        grid-template-columns: var(--grid-template-columns, 1fr);
+        border-radius: $radius-xxs;
+        //border: 1px solid $color-content-stroke;
+        display: grid;
+        transition: 0.3s;
+        width: 100%;
+        align-items: center;
+
+        &.clickable:hover {
+            background-color: $bg-gray-lightest;
+            cursor: pointer;
+        }
+    }
+
+    &-Cell{
+        flex: 1;
+        padding: 10px;
+        text-align: left;
+
+        &.center {
+            text-align: center;
+        }
+
+        &.right {
+            text-align: right;
+        }
+    }
+
+    &-HeaderCell{
+        
+    }
+
+    &-Footer{
+    }
+}

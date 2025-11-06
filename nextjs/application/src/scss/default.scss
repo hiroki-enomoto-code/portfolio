@@ -1,0 +1,7 @@
+@use "./modules/fontFace";
+
+body {
+	font-family: "Poppins", "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
+    font-weight: 600;
+	box-sizing:content-box;
+}

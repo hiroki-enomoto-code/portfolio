@@ -1,0 +1,22 @@
+@use "@/scss/global" as *;
+
+.m-Search{
+    &Button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 110px;
+        padding: 6px 10px;
+        gap: 5px;
+        border: 1px solid $color-border-black;
+        border-radius: $radius-circle;
+        background-color: $color-bg-white;
+        &_icon{
+            width: 24px;
+        }
+        &_text{
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+}
